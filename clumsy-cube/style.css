@@ -1,4 +1,4 @@
-/* Shared look for the studio pages: Clumsy Cube's palette and type. Fonts are SIL OFL 1.1 (see fonts/). */
+/* Clumsy Cube pages: the game's own palette and type. Fonts are SIL OFL 1.1 (see /fonts/). */
 @font-face { font-family: "Lilita One"; src: url(/fonts/lilita-one-latin-400-normal.woff2) format("woff2"); font-display: swap; }
 @font-face { font-family: "Nunito"; font-weight: 800; src: url(/fonts/nunito-latin-800-normal.woff2) format("woff2"); font-display: swap; }
 @font-face { font-family: "Nunito"; font-weight: 900; src: url(/fonts/nunito-latin-900-normal.woff2) format("woff2"); font-display: swap; }
@@ -36,11 +36,3 @@ a { color: var(--gold); text-underline-offset: 3px; overflow-wrap: anywhere; }
 }
 .btn:active { transform: translateY(4px); box-shadow: 0 1px 0 var(--gold-lip); }
 nav { display: flex; flex-wrap: wrap; gap: 18px; font-size: 15px; margin-top: 44px; padding-top: 20px; border-top: 2px dashed var(--line); }
-/* Studio home: one card per game. */
-.games { display: grid; gap: 14px; padding: 0; list-style: none; }
-.game { display: flex; gap: 16px; align-items: center; background: var(--panel); border: 2px solid var(--line); border-radius: 22px; padding: 14px 16px; }
-.game img { width: 72px; height: 72px; border-radius: 18px; flex: none; }
-.game img.pixel { image-rendering: pixelated; }
-.game h3 { margin: 0 0 2px; font: 400 24px/1.1 var(--display); letter-spacing: .02em; }
-.game p { margin: 0 0 6px; color: var(--dim); font-size: 15px; line-height: 1.4; }
-.game .links { display: flex; flex-wrap: wrap; gap: 14px; font-size: 15px; }
