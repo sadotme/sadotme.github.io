@@ -1,0 +1,46 @@
+/* Shared look for the studio pages: Clumsy Cube's palette and type. Fonts are SIL OFL 1.1 (see fonts/). */
+@font-face { font-family: "Lilita One"; src: url(/fonts/lilita-one-latin-400-normal.woff2) format("woff2"); font-display: swap; }
+@font-face { font-family: "Nunito"; font-weight: 800; src: url(/fonts/nunito-latin-800-normal.woff2) format("woff2"); font-display: swap; }
+@font-face { font-family: "Nunito"; font-weight: 900; src: url(/fonts/nunito-latin-900-normal.woff2) format("woff2"); font-display: swap; }
+:root {
+  --sky-top: #34506e; --sky-mid: #1c2a3a; --sky-bot: #0e1520;
+  --bone: #fff4dc; --dim: rgba(255,244,220,.7); --gold: #ffc53d; --gold-lip: #c27c12; --coral: #ff5f45;
+  --panel: rgba(8,10,20,.32); --line: rgba(255,255,255,.12);
+  --display: "Lilita One", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
+  --body: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--sky-bot); }
+body {
+  margin: 0; min-height: 100vh; color: var(--bone); font: 800 17px/1.6 var(--body);
+  background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 40%, var(--sky-bot) 100%) fixed;
+  padding-block: 36px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+main { max-width: 680px; margin: 0 auto; }
+header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+header img { width: 72px; height: 72px; border-radius: 18px; box-shadow: 0 5px 0 rgba(8,10,20,.45); flex: none; }
+h1, h2 { font-family: var(--display); font-weight: 400; letter-spacing: .02em; line-height: 1.15; text-wrap: balance; }
+h1 { margin: 0; font-size: 38px; text-shadow: 0 4px 0 rgba(8,10,20,.5); }
+h1 small { display: block; font: 900 12px/1 var(--body); letter-spacing: .16em; color: var(--gold); margin-top: 8px; text-shadow: none; }
+h2 { font-size: 24px; color: var(--gold); margin: 36px 0 8px; text-shadow: 0 3px 0 rgba(8,10,20,.45); }
+p, li { margin: 0 0 12px; }
+.muted { color: var(--dim); font-size: 15px; }
+a { color: var(--gold); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.box { background: var(--panel); border: 2px solid var(--line); border-radius: 20px; padding: 16px 18px 6px; }
+.btn {
+  display: inline-block; margin: 2px 0 14px; padding: 12px 18px 10px; border-radius: 16px; text-decoration: none;
+  font: 400 20px/1 var(--display); letter-spacing: .03em; color: #3d2200;
+  background: linear-gradient(180deg, #ffe07a 0%, var(--gold) 55%, #f5aa22 100%); box-shadow: 0 5px 0 var(--gold-lip);
+}
+.btn:active { transform: translateY(4px); box-shadow: 0 1px 0 var(--gold-lip); }
+nav { display: flex; flex-wrap: wrap; gap: 18px; font-size: 15px; margin-top: 44px; padding-top: 20px; border-top: 2px dashed var(--line); }
+/* Studio home: one card per game. */
+.games { display: grid; gap: 14px; padding: 0; list-style: none; }
+.game { display: flex; gap: 16px; align-items: center; background: var(--panel); border: 2px solid var(--line); border-radius: 22px; padding: 14px 16px; }
+.game img { width: 72px; height: 72px; border-radius: 18px; flex: none; }
+.game img.pixel { image-rendering: pixelated; }
+.game h3 { margin: 0 0 2px; font: 400 24px/1.1 var(--display); letter-spacing: .02em; }
+.game p { margin: 0 0 6px; color: var(--dim); font-size: 15px; line-height: 1.4; }
+.game .links { display: flex; flex-wrap: wrap; gap: 14px; font-size: 15px; }
